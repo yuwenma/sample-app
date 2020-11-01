@@ -1,0 +1,13 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: fishfood-kpt-sample-app
+upstream:
+  type: git
+  git:
+    commit: cfc0c25fedac86664074b89fe847ac82e5c04c25
+    repo: https://github.com/yuwenma/sample-app
+    directory: /
+    ref: master
+packageMetadata:
+  shortDescription: sample description
