@@ -4,10 +4,11 @@ metadata:
   name: kpt-cl
 build:
   artifacts:
-  - image: "frontend"
-    context: php-redis
-  # - image: "redis-slave"
-  #   context: redis-slave
+  - image: "app"
+    context: app
 deploy:
   kpt:
     dir: config
+    fn:
+      fnPath: validation-kubeval
+      network: true
