@@ -9,7 +9,9 @@ build:
 deploy:
   kubectl:
     flags:
-      global:
+      apply:
       - "--prune=true"
+      - "--all=true"
+      - "--namespace=default"
     manifests:
-    - config/frontend/
+    - config/frontend/*.yaml
