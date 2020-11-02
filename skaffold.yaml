@@ -4,7 +4,7 @@ metadata:
   name: kpt-cl
 build:
   artifacts:
-  - image: frontend
+  - image: "frontend"
     context: php-redis
 deploy:
   kpt:
