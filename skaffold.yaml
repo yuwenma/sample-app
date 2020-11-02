@@ -10,5 +10,5 @@ deploy:
   kpt:
     dir: config
     fn:
-      fnPath: validation-kubeval
+      fnPath: validations
       network: true
