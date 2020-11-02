@@ -7,8 +7,9 @@ build:
   - image: "frontend"
     context: php-redis
 deploy:
-  kpt:
-    dir: config
-    fn:
-      fnPath: validations
-      network: true
+  kubectl:
+    flags:
+      global:
+      - "--prune=true"
+    manifests:
+    - config/frontend/
